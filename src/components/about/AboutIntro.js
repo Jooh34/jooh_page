@@ -32,6 +32,13 @@ const ProfileContainer = styled.div`
 
   padding-top: 80px;
   padding-left: 50px;
+
+`;
+const Text_4em = styled.h2`
+  font-family : 'ylee';
+  color: #dfdfdf;
+  font-size : 4em;
+  text-align : center;
 `;
 
 const Text_3em = styled.h2`
@@ -64,7 +71,7 @@ const ImageContainer = styled.div`
   float : left;
 `;
 
-const introMessage = 'Downloaded this font to use Korean, but English version is so fancy. That made me write my profile in English.';
+const introMessage = 'Thank you for visiting my website ! ';
 
 class AboutIntro extends Component {
 
@@ -82,7 +89,7 @@ class AboutIntro extends Component {
             <Text_2em> Computer Science and Engineering </Text_2em>
           </ProfileTextContainer>
           <IntroductionContainer>
-            <Text_2em> {introMessage} </Text_2em>
+            <Text_4em> {introMessage} </Text_4em>
           </IntroductionContainer>
         </ProfileContainer>
       </Container>
