@@ -7,6 +7,7 @@ class Postpage extends Component {
   render() {
     return (
       <div>
+        <PostIntro/>
         <PostList/>
       </div>
     );

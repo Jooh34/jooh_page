@@ -3,6 +3,8 @@ import { Menu } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
+import CircularSocialButtons from './CircularSocialButtons';
+
 const Margin = styled.div`
   margin-top : 20px
 `;
@@ -33,6 +35,9 @@ class NavigationBar extends Component {
           <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
           <Menu.Item name='about' active={activeItem === 'about'} onClick={this.handleItemClick} />
           <Menu.Item name='post' active={activeItem === 'post'} onClick={this.handleItemClick} />
+          <Menu.Menu position='right'>
+            <CircularSocialButtons/>
+          </Menu.Menu>
         </Menu>
       </Margin>
     )
