@@ -2,10 +2,8 @@ const posts = [
   {
     title : '강원학사 식단 메뉴 크롤링 서버',
     subtitle : 'April 2018',
-    description : '강원학사 식단 메뉴 url : http://injae.gwd.go.kr/site/college/page/sub03_06_04.asp 에서 날짜 및 해당 날짜의 식단 정보 크롤링 연습. \
-    식단 정보 : http://34.213.112.175/menus/  \
-    날짜 정보 : http://34.213.112.175/dates/  \
-    가상 서버는 AWS EC2 를 이용하였습니다. ',
+    description : '강원학사 홈페이지에서 날짜 및 해당 날짜의 식단 정보 크롤링 연습. \
+    서버는 AWS EC2 를 이용하였습니다. ',
     labels : [
       'NodeJS',
       'Back-end',
@@ -13,13 +11,13 @@ const posts = [
     ],
     cover : require('./images/project/haksasik/ssh.JPG'),
     github_url : 'https://github.com/Jooh34/nodejs-server-practice',
+    demo_url : 'http://34.213.112.175/menus/',
   },
 
   {
     title : '위치 기반 SNS 웹사이트 \'Happening\' 개발',
     subtitle : 'Mar 2017 ~ June 2017',
-    description : '임시 Website url : http://34.217.214.191:3000/ \
-    Front-end : React/Redux , Back-end : Django-REST \
+    description : 'Front-end : React/Redux , Back-end : Django-REST \
     \'소프트웨어의 개발 및 실습\' 강의에서 진행한 4인 개발 프로젝트입니다. \
     위치 기반 SNS인 Happening을 개발했습니다. ',
     labels : [
@@ -32,6 +30,7 @@ const posts = [
       'Happening',
     ],
     cover : require('./images/project/swpp/swpp1.png'),
+    demo_url : 'http://34.217.214.191:3000/',
   },
 
   {
@@ -152,6 +151,7 @@ const posts = [
     ],
     cover : require('./images/project/siksha/siksha1.png'),
     github_url : 'https://github.com/wafflestudio/siksha',
+    demo_url : 'https://play.google.com/store/apps/details?id=com.wafflestudio.siksha'
   },
 
   {

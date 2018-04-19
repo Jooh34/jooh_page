@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import postWallpaper from '../../assets/images/post_wallpaper.png';
+import postWallpaper from '../../assets/images/wallpaper/post_wallpaper.png';
 
 const BackgroundContainer = styled.div`
   background-image: url(${postWallpaper});

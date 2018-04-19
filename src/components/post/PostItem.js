@@ -21,6 +21,8 @@ class PostItem extends Component {
             { (post.github_url) && <Icon name='github'/> }
             { (post.github_url) && <a href= {post.github_url}>{post.github_url}</a> }
           </Item.Meta>
+          { (post.demo_url) && <Label icon = {'external'} content ={'Demo'} color = {'blue'} as='a'/> }
+
         </Item.Content>
       </Item>
     );
