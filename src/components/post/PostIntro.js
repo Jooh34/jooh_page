@@ -20,6 +20,7 @@ const IntroText = styled.h2`
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   color: white;
+  background-color : hsla(89, 43%, 51%, 0.5);;
   text-transform: uppercase;
   margin: 0;
   position: absolute;
