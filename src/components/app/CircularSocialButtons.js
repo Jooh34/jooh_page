@@ -24,22 +24,12 @@ class CircularSocialButtons extends Component {
   }
 
   handleMailClick () {
-    if(this.state.mail_show) {
-      this.setState(function (state, props) {
-        return {
-          mail : '',
-          mail_show : false,
-        }
-      });
-    }
-    else {
-      this.setState(function (state, props) {
-        return {
-          mail : 'jooh3444@gmail.com',
-          mail_show : true,
-        }
-      });
-    }
+    this.setState(function (state, props) {
+      return {
+        mail : 'jooh3444@gmail.com',
+        mail_show : true,
+      }
+    });
   }
 
   render() {

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import CircularSocialButtons from './CircularSocialButtons';
 
 const Margin = styled.div`
-  padding-top : 30px;
+  padding-top : 80px;
 `;
 
 class NavigationBar extends Component {
@@ -35,9 +35,6 @@ class NavigationBar extends Component {
           <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
           <Menu.Item name='about' active={activeItem === 'about'} onClick={this.handleItemClick} />
           <Menu.Item name='post' active={activeItem === 'post'} onClick={this.handleItemClick} />
-          <Menu.Menu position='right'>
-            <CircularSocialButtons/>
-          </Menu.Menu>
         </Menu>
       </Margin>
     )

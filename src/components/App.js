@@ -3,6 +3,7 @@ import { Loader } from 'semantic-ui-react'
 
 import NavigationBar from './app/NavigationBar'
 import Loadingpage from './app/Loadingpage'
+import Footer from './app/Footer'
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class App extends Component {
     this.state = {
       loading : true,
       intervalId : '',
-      count : 3,
+      count : 2,
     }
 
     this.loadingTimer = this.loadingTimer.bind(this);
@@ -43,6 +44,7 @@ class App extends Component {
         <div>
           <NavigationBar />
           {this.props.children}
+          <Footer />
         </div>
       );
   }

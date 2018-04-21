@@ -18,6 +18,8 @@ const Container = styled.div`
   padding-top : 20px;
   padding-left : 20px;
 
+  margin-bottom : 10px;
+
   opacity : ${props => props.opacity};
 `;
 

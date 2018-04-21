@@ -14,7 +14,7 @@ injectGlobal`
 `;
 
 const Container = styled.div`
-  background-image: url(${basketball_wallpaper});
+  background-color #fdfdfd;
   min-height: 600px;
 
   width: 100%;
@@ -27,7 +27,7 @@ const Container = styled.div`
 `;
 
 const ProfileContainer = styled.div`
-  width : 50%;
+  width : 80%;
   height : 560px;
 
   padding-top: 200px;
@@ -44,14 +44,14 @@ const Text_4em = styled.h2`
 const Text_3em = styled.h2`
   font-family : 'blogger';
   color: #dfdfdf;
-  font-size : 6em;
+  font-size : 4em;
   text-align : center;
 `;
 
 const Text_2em = styled.h2`
   font-family : 'blogger';
   color: #dfdfdf;
-  font-size : 4em;
+  font-size : 3em;
   text-align : center;
 `;
 
@@ -80,7 +80,7 @@ class AboutIntro extends Component {
       <Container>
         <ProfileContainer>
           <ImageContainer>
-            <Image src= {require('../../assets/images/avatar.jpg')} size='medium' />
+            <Image src= {require('../../assets/images/avatar.jpg')} size='small' circular/>
           </ImageContainer>
           <ProfileTextContainer>
             <Text_3em> 남 중 혁 </Text_3em>
