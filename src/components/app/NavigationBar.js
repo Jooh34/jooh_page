@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import CircularSocialButtons from './CircularSocialButtons';
 
 const Margin = styled.div`
-  margin-top : 20px
+  padding-top : 30px;
 `;
 
 class NavigationBar extends Component {
