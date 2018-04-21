@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import { Button, Icon, Image as ImageComponent, Item, Label } from 'semantic-ui-react'
+import styled from 'styled-components';
+
+const ItemTemplete = styled(Item)`
+  &&& {
+   min-height : 250px;
+  }
+`;
 
 class PostItem extends Component {
   render() {
 
     const post = this.props.post;
     return (
-      <Item>
+      <ItemTemplete>
         <Item.Image src= { post.cover } />
         <Item.Content>
           <Item.Header as='a'> { post.title } </Item.Header>
@@ -24,7 +31,7 @@ class PostItem extends Component {
           { (post.demo_url) && <Label icon = {'external'} content ={'Demo'} color = {'blue'} as='a'/> }
 
         </Item.Content>
-      </Item>
+      </ItemTemplete>
     );
   }
 }
