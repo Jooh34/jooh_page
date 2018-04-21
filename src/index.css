@@ -2,3 +2,8 @@
   font-family: 'ylee';
   src: url('./assets/fonts/ylee.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'blogger';
+  src: url('./assets/fonts/Blogger.ttf') format('truetype');
+}

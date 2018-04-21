@@ -4,7 +4,7 @@ import { injectGlobal } from 'styled-components';
 import { Image } from 'semantic-ui-react'
 
 import ylee_url from '../../assets/fonts/ylee.ttf';
-import basketball_wallpaper from '../../assets/images/wallpaper/basketball.jpg';
+import basketball_wallpaper from '../../assets/images/wallpaper/about_wallpaper.jpg';
 
 injectGlobal`
   @font-face {
@@ -30,28 +30,28 @@ const ProfileContainer = styled.div`
   width : 50%;
   height : 560px;
 
-  padding-top: 80px;
-  padding-left: 50px;
+  padding-top: 200px;
+  margin : auto;
 
 `;
 const Text_4em = styled.h2`
-  font-family : 'ylee';
+  font-family : 'blogger';
   color: #dfdfdf;
   font-size : 4em;
   text-align : center;
 `;
 
 const Text_3em = styled.h2`
-  font-family : 'ylee';
+  font-family : 'blogger';
   color: #dfdfdf;
-  font-size : 3em;
+  font-size : 6em;
   text-align : center;
 `;
 
 const Text_2em = styled.h2`
-  font-family : 'ylee';
+  font-family : 'blogger';
   color: #dfdfdf;
-  font-size : 2em;
+  font-size : 4em;
   text-align : center;
 `;
 
@@ -80,7 +80,7 @@ class AboutIntro extends Component {
       <Container>
         <ProfileContainer>
           <ImageContainer>
-            <Image src= {require('../../assets/images/avatar.jpg')} size='small' circular />
+            <Image src= {require('../../assets/images/avatar.jpg')} size='medium' />
           </ImageContainer>
           <ProfileTextContainer>
             <Text_3em> 남 중 혁 </Text_3em>
@@ -88,9 +88,6 @@ class AboutIntro extends Component {
             <Text_2em> Seoul Natinal University </Text_2em>
             <Text_2em> Computer Science and Engineering </Text_2em>
           </ProfileTextContainer>
-          <IntroductionContainer>
-            <Text_4em> {introMessage} </Text_4em>
-          </IntroductionContainer>
         </ProfileContainer>
       </Container>
     );
