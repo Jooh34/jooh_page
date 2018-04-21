@@ -9,6 +9,15 @@ const ItemTemplete = styled(Item)`
 `;
 
 class PostItem extends Component {
+  constructor(props) {
+    super(props);
+    this.handleDemoClick = this.handleDemoClick.bind(this);
+  }
+
+  handleDemoClick (url) {
+    window.open(url);
+  }
+
   render() {
 
     const post = this.props.post;
@@ -28,7 +37,7 @@ class PostItem extends Component {
             { (post.github_url) && <Icon name='github'/> }
             { (post.github_url) && <a href= {post.github_url}>{post.github_url}</a> }
           </Item.Meta>
-          { (post.demo_url) && <Label icon = {'external'} content ={'Demo'} color = {'blue'} as='a'/> }
+          { (post.demo_url) && <Label icon = {'external'} content ={'Demo'} color = {'blue'} as='a' onClick = {()=>this.handleDemoClick(post.demo_url)}/> }
 
         </Item.Content>
       </ItemTemplete>

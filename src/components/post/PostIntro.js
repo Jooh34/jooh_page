@@ -54,7 +54,7 @@ class PostIntro extends Component {
     this.setState(function (state, props) {
       return {
         opacity : (600-scrollY)/600,
-        IntroTextY : 60 + 20 *scrollY/200,
+        IntroTextY : 60 + 20 *scrollY/300,
       }
     });
   }
