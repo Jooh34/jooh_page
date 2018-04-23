@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { injectGlobal } from 'styled-components';
 import { Image } from 'semantic-ui-react'
 
-import basketball_wallpaper from '../../assets/images/wallpaper/basketball.jpg';
+import home_wallpaper from '../../assets/images/wallpaper/home_wallpaper.jpg';
 
 
 const Container = styled.div`
-  background-image: url(${basketball_wallpaper});
+  background-image: url(${home_wallpaper});
   min-height: 600px;
 
   width: 100%;
@@ -18,37 +18,37 @@ const Container = styled.div`
   padding-top : 20px;
   padding-left : 20px;
 
-  margin-bottom : 10px;
-
   opacity : ${props => props.opacity};
 `;
 
 const Text4em = styled.h2`
-  font-family: 'ylee';
+  font-family: 'axis';
+  color: #dfdfdf;
+  font-size : 3em;
+  text-align : center;
+`;
+
+const Text6em = styled.h2`
+  font-family: 'axis';
   color: #dfdfdf;
   font-size : 4em;
   text-align : center;
 `;
 
-const Text6em = styled.h2`
-  font-family: 'ylee';
-  color: #dfdfdf;
-  font-size : 6em;
-  text-align : center;
-`;
-
 const WelcomeTextContainer = styled.div`
-  float : top;
-  margin-top : 50px;
-  width : 60%;
-  transform: translate(${props => props.left + '%'}, 0%);
+  padding-top : 150px;
+  margin : auto;
+  width : 80%;
+  transform: translate(${props => props.left/5 + '%'}, 0%);
+  opacity : ${props => (props.left+100)*0.01};
 `;
 
 const IntroductionContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  width : 50%;
-  transform: translate(${props => props.left + '%'}, 0%);
+  width : 70%;
+  margin : auto;
+  margin-top : 150px;
+  transform: translate(${props => props.left/5 + '%'}, 0%);
+  opacity : ${props => (props.left+100)*0.01};
 `;
 
 const welcomeMessage = 'Welcome to Jooh\'s Page!'
@@ -71,7 +71,7 @@ class HomeIntro extends Component {
   }
 
   componentDidMount() {
-    var intervalId = setInterval(this.wallpaperFadeIn, 10);
+    var intervalId = setInterval(this.wallpaperFadeIn, 5);
     this.setState({intervalId: intervalId});
   }
 
@@ -80,23 +80,23 @@ class HomeIntro extends Component {
 
     if(this.state.opacity >= 1) {
       clearInterval(this.state.intervalId);
-      var intervalId = setInterval(this.welcomeToRight, 10);
+      var intervalId = setInterval(this.welcomeToRight, 5);
       this.setState({intervalId: intervalId});
     }
   }
 
   welcomeToRight() {
-    this.setState({ welcomeLeft: this.state.welcomeLeft + 2 });
+    this.setState({ welcomeLeft: this.state.welcomeLeft + 1 });
 
     if(this.state.welcomeLeft >= 0) {
       clearInterval(this.state.intervalId);
-      var intervalId = setInterval(this.introToRight, 10);
+      var intervalId = setInterval(this.introToRight, 5);
       this.setState({intervalId: intervalId});
     }
   }
 
   introToRight() {
-    this.setState({ introLeft: this.state.introLeft + 2 });
+    this.setState({ introLeft: this.state.introLeft + 1 });
 
     if(this.state.introLeft >= 0) {
       clearInterval(this.state.intervalId);

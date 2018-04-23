@@ -1,95 +1,69 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { injectGlobal } from 'styled-components';
-import { Image } from 'semantic-ui-react'
-
-import ylee_url from '../../assets/fonts/ylee.ttf';
-import basketball_wallpaper from '../../assets/images/wallpaper/about_wallpaper.jpg';
-
-injectGlobal`
-  @font-face {
-    font-family: 'ylee';
-    src: url(${ylee_url}) format('truetype');
-  }
-`;
+import home_wallpaper from '../../assets/images/wallpaper/about_wallpaper.jpg';
 
 const Container = styled.div`
-  background-color #fdfdfd;
-  min-height: 600px;
+  background-image : url(${home_wallpaper});
 
   width: 100%;
-  height : auto;
+  margin-top : ${props => props.max_height-props.height}px;
+  height: ${props => props.height}px;
+
   background-size: cover;
   background-repeat: no-repeat;
-
-  padding-top : 20px;
-  padding-left : 20px;
 `;
 
-const ProfileContainer = styled.div`
-  width : 80%;
-  height : 560px;
+const Temp = styled.div`
 
-  padding-top: 200px;
-  margin : auto;
+  background-color : teal;
 
-`;
-const Text_4em = styled.h2`
-  font-family : 'blogger';
-  color: #dfdfdf;
-  font-size : 4em;
-  text-align : center;
+  width: 100%;
+  height: 600px;
 `;
 
-const Text_3em = styled.h2`
-  font-family : 'blogger';
-  color: #dfdfdf;
-  font-size : 4em;
-  text-align : center;
-`;
-
-const Text_2em = styled.h2`
-  font-family : 'blogger';
-  color: #dfdfdf;
-  font-size : 3em;
-  text-align : center;
-`;
-
-const ProfileTextContainer = styled.div`
-  float : right;
-  margin-right : 80px;
-`;
-
-const IntroductionContainer = styled.div`
-  clear : both;
-  width : 100%;
-  height : 100px;
-  padding-top : 50px;
-`;
-
-const ImageContainer = styled.div`
-  float : left;
-`;
-
-const introMessage = 'Thank you for visiting my website ! ';
+var END_SCROLL_Y = 780;
+var IMAGE_HEIGHT = 600;
 
 class AboutIntro extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      posY : 0,
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll, { passive: true })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll(event) {
+    var scrollY = window.scrollY;
+    console.log(scrollY);
+    this.setState(function (state, props) {
+      return {
+        posY : scrollY,
+      }
+    });
+  }
+
   render() {
+
+    var height = IMAGE_HEIGHT;
+    if(this.state.posY < END_SCROLL_Y-IMAGE_HEIGHT) height = IMAGE_HEIGHT;
+    else if(this.state.posY > END_SCROLL_Y) height = 0;
+    else height = END_SCROLL_Y-this.state.posY;
+
     return (
-      <Container>
-        <ProfileContainer>
-          <ImageContainer>
-            <Image src= {require('../../assets/images/avatar.jpg')} size='small' circular/>
-          </ImageContainer>
-          <ProfileTextContainer>
-            <Text_3em> 남 중 혁 </Text_3em>
-            <Text_2em> SoftwareDeveloper </Text_2em>
-            <Text_2em> Seoul Natinal University </Text_2em>
-            <Text_2em> Computer Science and Engineering </Text_2em>
-          </ProfileTextContainer>
-        </ProfileContainer>
-      </Container>
+      <div>
+        <Container max_height = {IMAGE_HEIGHT} height = {height}/>
+        <Temp />
+      </div>
     );
   }
 }

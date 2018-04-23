@@ -7,3 +7,18 @@
   font-family: 'blogger';
   src: url('./assets/fonts/Blogger.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'axis';
+  src: url('./assets/fonts/Axis.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'metropolis';
+  src: url('./assets/fonts/Metropolis.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'nanum';
+  src: url('./assets/fonts/Nanum.ttf') format('truetype');
+}

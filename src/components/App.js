@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Loader } from 'semantic-ui-react'
 
 import NavigationBar from './app/NavigationBar'
 import Loadingpage from './app/Loadingpage'
@@ -11,7 +10,7 @@ class App extends Component {
     this.state = {
       loading : true,
       intervalId : '',
-      count : 2,
+      count : 1,
     }
 
     this.loadingTimer = this.loadingTimer.bind(this);

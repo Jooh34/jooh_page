@@ -38,7 +38,7 @@ const Bulkhead = styled.div`
 `;
 
 const SocialButtonsContainer = styled.div`
-  margin-top : 40px;
+  margin-top : 70px;
 
   width : 30%;
   margin-left : 40%;
