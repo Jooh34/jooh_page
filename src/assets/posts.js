@@ -1,5 +1,22 @@
 const posts = [
   {
+    title : '강원학사 식단 앱',
+    subtitle : 'April 2018',
+    description : '대학생활 중 강원학사에 살면서 매번 웹으로 강원학사 식단을 확인하는게 번거롭다고 많이 느껴서 \
+    언젠가는 강원학사 식단 정보 앱을 만들어 학사 사람들에게 배포해야겠다고 생각했었습니다. \
+    마침 nodeJS 연습 겸 식단 앱을 만들어 사람들에게 배포했습니다',
+    labels : [
+      'Android',
+      'Java',
+      'NodeJS',
+      'AWS EC2',
+    ],
+    cover : require('./images/project/haksasik/main1.png'),
+    github_url : 'https://github.com/Jooh34/Haksasik',
+    demo_url : 'https://play.google.com/store/apps/details?id=com.jooh.mnh51.haksasik',
+  },
+
+  {
     title : '강원학사 식단 메뉴 크롤링 서버',
     subtitle : 'April 2018',
     description : '강원학사 홈페이지에서 날짜 및 해당 날짜의 식단 정보 크롤링 연습. \
@@ -10,7 +27,7 @@ const posts = [
       'AWS EC2',
     ],
     cover : require('./images/project/haksasik/ssh.JPG'),
-    github_url : 'https://github.com/Jooh34/nodejs-server-practice',
+    github_url : 'https://github.com/Jooh34/haksasik-server.git',
     demo_url : 'http://34.213.112.175/menus/',
   },
 
