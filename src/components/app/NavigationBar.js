@@ -3,10 +3,9 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  padding-top : 80px;
   width : 100%;
-  height : 180px;
-  background-color : #ffffff;
+  height : 80px;
+  background-color : #26262a;
 `;
 
 const MenusContainer = styled.div`
@@ -25,9 +24,9 @@ const MenuContainer = styled.div`
 const Menu = styled.div`
   font : axis;
   font-weight: bold;
-  color : ${props => (props.mouseOn === props.name) ? 'teal' : '#424242'}
-  background-color : #ffffff;
-  font-size : 1.2em;
+  color : ${props => (props.mouseOn === props.name || props.mouseOn === '') ? '#ffffff' : '#8d888f'}
+  background-color : #26262a;
+  font-size : 1em;
   display: inline-block;
   margin-left : 20%;
   margin-top : 10px;
@@ -35,12 +34,12 @@ const Menu = styled.div`
   width : 70%;
   text-align : center;
 
-  border : ${props => (props.mouseOn === props.name) ? '2px solid teal' : ''}
+  border : ${props => (props.mouseOn === props.name) ? '1px solid #ffffff' : ''}
   border-radius: 20px;
 `;
 
 const Bulkhead = styled.div`
-  background-color : #26262a;
+  background-color : #ffffff;
 
   width : 0.25%;
   height : 15px;
@@ -82,11 +81,9 @@ class NavigationBar extends Component {
           <MenuContainer onClick = {()=>this.handleMenuClick('home')} onMouseEnter ={() => this.handleMenuMouseEnter('home')} onMouseLeave ={() => this.handleMenuMouseLeave('home')}>
             <Menu mouseOn = {this.state.mouseOn} name = 'home'> HOME </Menu>
           </MenuContainer>
-          <Bulkhead />
           <MenuContainer onClick = {()=>this.handleMenuClick('about')} onMouseEnter ={() => this.handleMenuMouseEnter('about')} onMouseLeave ={() => this.handleMenuMouseLeave('about')}>
             <Menu mouseOn = {this.state.mouseOn} name = 'about'> ABOUT ME </Menu>
           </MenuContainer>
-          <Bulkhead />
           <MenuContainer onClick = {()=>this.handleMenuClick('post')} onMouseEnter ={() => this.handleMenuMouseEnter('post')} onMouseLeave ={() => this.handleMenuMouseLeave('post')}>
             <Menu mouseOn = {this.state.mouseOn} name = 'post'> MY WORK </Menu>
           </MenuContainer>

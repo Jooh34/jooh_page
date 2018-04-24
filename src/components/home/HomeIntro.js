@@ -15,8 +15,8 @@ const Container = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 
-  padding-top : 20px;
-  padding-left : 20px;
+  padding-top : 10%;
+  padding-left : 5%;
 
   opacity : ${props => props.opacity};
 `;
@@ -24,35 +24,46 @@ const Container = styled.div`
 const Text4em = styled.h2`
   font-family: 'axis';
   color: #dfdfdf;
-  font-size : 3em;
+  font-size : 2em;
   text-align : center;
 `;
 
 const Text6em = styled.h2`
   font-family: 'axis';
   color: #dfdfdf;
-  font-size : 4em;
+  font-size : 3.5em;
   text-align : center;
 `;
 
-const WelcomeTextContainer = styled.div`
-  padding-top : 150px;
+const ImageContainer = styled.div`
+  width : 20%;
   margin : auto;
-  width : 80%;
+
+  display: inline-block;
+`;
+
+const WelcomeTextContainer = styled.div`
+
+  margin : auto;
+  width : 75%;
+  float : right;
+  display: inline-block;
   transform: translate(${props => props.left/5 + '%'}, 0%);
   opacity : ${props => (props.left+100)*0.01};
 `;
 
 const IntroductionContainer = styled.div`
-  width : 70%;
+  width : 60%;
   margin : auto;
-  margin-top : 150px;
+  margin-right : 10%
+  float : right;
   transform: translate(${props => props.left/5 + '%'}, 0%);
   opacity : ${props => (props.left+100)*0.01};
+
 `;
 
 const welcomeMessage = 'Welcome to Jooh\'s Page!'
-const introMessage = 'Thank you for visiting my website!';
+const introMessage = 'I\'m a developer who likes learning something new.';
 
 class HomeIntro extends Component {
 
@@ -109,6 +120,9 @@ class HomeIntro extends Component {
     console.log('il' + this.state.introLeft)
     return (
       <Container opacity = {this.state.opacity}>
+        <ImageContainer>
+          <Image src = {require('../../assets/images/avatar.jpg')} size='medium' circular />
+        </ImageContainer>
         <WelcomeTextContainer left = {this.state.welcomeLeft}>
           <Text6em> {welcomeMessage} </Text6em>
         </WelcomeTextContainer>

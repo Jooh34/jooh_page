@@ -23,7 +23,7 @@ const TextNav = styled.div`
   background-color : #26262a;
   font-size : 1em;
   cursor: pointer;
-  display: inline-block
+  display: inline-block;
 
   width : 33%;
   text-align : center;

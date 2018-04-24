@@ -12,7 +12,7 @@ const BackgroundContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 
-  opacity : ${props => props.opacity};
+  opacity : ${props => 0.7+0.3*props.opacity};
 `;
 
 const IntroText = styled.h2`
