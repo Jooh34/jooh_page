@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import postWallpaper from '../../assets/images/wallpaper/post_wallpaper.png';
+import postWallpaper from '../../assets/images/wallpaper/post_wallpaper.jpg';
 
 const BackgroundContainer = styled.div`
   background-image: url(${postWallpaper});
@@ -12,14 +12,14 @@ const BackgroundContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 
-  opacity : ${props => 0.7+0.3*props.opacity};
+  opacity : 1.0;
 `;
 
 const IntroText = styled.h2`
   font-family: Roboto', sans-serif';
   font-weight: 900;
-  color: white;
-  background-color : hsla(180, 100%, 25%, 0.5);
+  color: black;
+  background-color : hsla(120, 100%, 90%, 0.7);
   text-transform: uppercase;
   margin: 0;
   position: absolute;
@@ -31,6 +31,7 @@ const IntroText = styled.h2`
 
 var END_SCROLL_Y = 780;
 var IMAGE_HEIGHT = 600;
+var START_SCROLL_Y = 180;
 
 class PostIntro extends Component {
 
@@ -71,12 +72,12 @@ class PostIntro extends Component {
     else if (this.state.posY > END_SCROLL_Y) {
       opacity = 0;
       textY = 100;
-      height = 0;
+      height = IMAGE_HEIGHT * 0.5;
     }
     else {
       opacity = (END_SCROLL_Y-this.state.posY)/600;
       textY = 60 + 40 * (1-opacity);
-      height = END_SCROLL_Y-this.state.posY;
+      height = IMAGE_HEIGHT - (this.state.posY - START_SCROLL_Y) * 0.7;
     }
     return (
       <BackgroundContainer max_height = {IMAGE_HEIGHT} height = {height} opacity = {opacity}>

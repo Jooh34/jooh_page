@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-import { Icon, Image as ImageComponent, Item } from 'semantic-ui-react'
 import styled from 'styled-components';
 
 import PostItem from './PostItem'
 import PaginationNavBar from './PaginationNavBar'
 
-const PostListTemplete = styled.div`
+const PostBackgroundContainer = styled.div`
+  background-color : #edeeef;
+`;
+
+const PostListContainer = styled.div`
   width: 70%;
-  margin: 30px auto;
+  padding-top : 30px;
+  margin: auto;
 `;
 
 const posts = require('../../assets/posts').default;
@@ -33,12 +37,12 @@ class PostList extends Component {
   render() {
     const activePosts = posts.slice((this.state.activePage-1)*5,this.state.activePage*5)
     return (
-      <PostListTemplete>
-        <Item.Group divided>
-          { activePosts.map(post => <PostItem post={post}/>) }
-        </Item.Group>
-        <PaginationNavBar handlePageChange={this.handlePageChange}/>
-      </PostListTemplete>
+      <PostBackgroundContainer>
+        <PostListContainer>
+            { activePosts.map(post => <PostItem post={post}/>) }
+          <PaginationNavBar handlePageChange={this.handlePageChange}/>
+        </PostListContainer>
+      </PostBackgroundContainer>
     );
   }
 }

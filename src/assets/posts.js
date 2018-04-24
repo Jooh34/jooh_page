@@ -11,13 +11,13 @@ const posts = [
       'NodeJS',
       'AWS EC2',
     ],
-    cover : require('./images/project/haksasik/main1.png'),
+    cover : require('./images/project/haksasik/haksasik_cover.png'),
     github_url : 'https://github.com/Jooh34/Haksasik',
     demo_url : 'https://play.google.com/store/apps/details?id=com.jooh.mnh51.haksasik',
   },
 
   {
-    title : '강원학사 식단 메뉴 크롤링 서버',
+    title : '강원학사 식단 메뉴 서버',
     subtitle : 'April 2018',
     description : '강원학사 홈페이지에서 날짜 및 해당 날짜의 식단 정보 크롤링 연습. \
     서버는 AWS EC2 를 이용하였습니다. ',
@@ -151,7 +151,7 @@ const posts = [
       'Java',
       'Event-Driven Simulation'
     ],
-    cover : require('./images/project/datacom/event.JPG'),
+    cover : require('./images/project/datacom/event.png'),
     github_url : 'https://github.com/Jooh34/datacom.git'
   },
 
@@ -166,7 +166,7 @@ const posts = [
       'Java',
       'Volley request'
     ],
-    cover : require('./images/project/siksha/siksha1.png'),
+    cover : require('./images/project/siksha/siksha_cover.png'),
     github_url : 'https://github.com/wafflestudio/siksha',
     demo_url : 'https://play.google.com/store/apps/details?id=com.wafflestudio.siksha'
   },

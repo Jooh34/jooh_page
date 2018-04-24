@@ -23,6 +23,7 @@ const Temp = styled.div`
 
 var END_SCROLL_Y = 780;
 var IMAGE_HEIGHT = 600;
+var START_SCROLL_Y = 180;
 
 class AboutIntro extends Component {
 
@@ -57,7 +58,7 @@ class AboutIntro extends Component {
     var height = IMAGE_HEIGHT;
     if(this.state.posY < END_SCROLL_Y-IMAGE_HEIGHT) height = IMAGE_HEIGHT;
     else if(this.state.posY > END_SCROLL_Y) height = 0;
-    else height = END_SCROLL_Y-this.state.posY;
+    else height = IMAGE_HEIGHT - (this.state.posY - START_SCROLL_Y) * 0.8;
 
     return (
       <div>

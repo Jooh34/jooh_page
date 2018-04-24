@@ -22,3 +22,13 @@
   font-family: 'nanum';
   src: url('./assets/fonts/Nanum.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'BMJUA';
+  src: url('./assets/fonts/BMJUA.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'trench';
+  src: url('./assets/fonts/trench.otf') format('truetype');
+}

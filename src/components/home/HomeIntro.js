@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { injectGlobal } from 'styled-components';
-import { Image } from 'semantic-ui-react'
+import { Image } from 'semantic-ui-react';
 
 import home_wallpaper from '../../assets/images/wallpaper/home_wallpaper.jpg';
 
