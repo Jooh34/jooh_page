@@ -5,12 +5,13 @@ import PostItem from './PostItem'
 import PaginationNavBar from './PaginationNavBar'
 
 const PostBackgroundContainer = styled.div`
+  width : 100%;
   background-color : #edeeef;
 `;
 
 const PostListContainer = styled.div`
   width: 70%;
-  padding-top : 30px;
+  padding-top : 200px;
   margin: auto;
 `;
 
@@ -28,7 +29,8 @@ class PostList extends Component {
   }
 
   handlePageChange(e, { activePage }) {
-    window.scrollTo(0, 400);
+    var el = document.getElementById('postlist');
+    el.scrollIntoView({ behavior: 'smooth' , block: "start", inline: "nearest"});
     this.setState({
       activePage : activePage,
     });
@@ -37,12 +39,14 @@ class PostList extends Component {
   render() {
     const activePosts = posts.slice((this.state.activePage-1)*5,this.state.activePage*5)
     return (
-      <PostBackgroundContainer>
-        <PostListContainer>
-            { activePosts.map(post => <PostItem post={post}/>) }
-          <PaginationNavBar handlePageChange={this.handlePageChange}/>
-        </PostListContainer>
-      </PostBackgroundContainer>
+      <div id = 'postlist'>
+        <PostBackgroundContainer>
+          <PostListContainer>
+              { activePosts.map(post => <PostItem post={post}/>) }
+            <PaginationNavBar handlePageChange={this.handlePageChange}/>
+          </PostListContainer>
+        </PostBackgroundContainer>
+      </div>
     );
   }
 }

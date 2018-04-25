@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import ScrollDownButton from '../app/ScrollDownButton';
 import postWallpaper from '../../assets/images/wallpaper/post_wallpaper.jpg';
 
 const BackgroundContainer = styled.div`
@@ -12,6 +13,7 @@ const BackgroundContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 
+  position : relative;
   opacity : 1.0;
 `;
 
@@ -29,9 +31,10 @@ const IntroText = styled.h2`
   transform: translate(-50%, -50%);
 `;
 
-var END_SCROLL_Y = 780;
+var END_SCROLL_Y = 680;
 var IMAGE_HEIGHT = 600;
-var START_SCROLL_Y = 180;
+var START_SCROLL_Y = 80;
+var SCROLL_DOWN_RATIO = 0.7;
 
 class PostIntro extends Component {
 
@@ -41,10 +44,13 @@ class PostIntro extends Component {
       posY : 0,
     };
     this.handleScroll = this.handleScroll.bind(this);
+    this.handleScrollDown = this.handleScrollDown.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll, { passive: true })
+    window.addEventListener('scroll', this.handleScroll, { passive: true });
+    START_SCROLL_Y = document.getElementById('postintro').getBoundingClientRect().y;
+    END_SCROLL_Y = START_SCROLL_Y + IMAGE_HEIGHT;
   }
 
   componentWillUnmount() {
@@ -60,6 +66,11 @@ class PostIntro extends Component {
     });
   }
 
+  handleScrollDown() {
+    var el = document.getElementById('postlist');
+    el.scrollIntoView({ behavior: 'smooth' , block: "start", inline: "nearest"});
+  }
+
   render() {
     var height = IMAGE_HEIGHT;
     var opacity = 1;
@@ -72,18 +83,19 @@ class PostIntro extends Component {
     else if (this.state.posY > END_SCROLL_Y) {
       opacity = 0;
       textY = 80;
-      height = IMAGE_HEIGHT * 0.5;
+      height = IMAGE_HEIGHT * (1-SCROLL_DOWN_RATIO);
     }
     else {
       opacity = (END_SCROLL_Y-this.state.posY)/600;
       textY = 60 + 20 * (1-opacity);
-      height = IMAGE_HEIGHT - (this.state.posY - START_SCROLL_Y) * 0.7;
+      height = IMAGE_HEIGHT - (this.state.posY - START_SCROLL_Y) * SCROLL_DOWN_RATIO;
     }
     return (
-      <BackgroundContainer max_height = {IMAGE_HEIGHT} height = {height} opacity = {opacity}>
+      <BackgroundContainer id = 'postintro' max_height = {IMAGE_HEIGHT} height = {height} opacity = {opacity}>
         <IntroText textY = {textY}>
           { 'Here is my work!'}
         </IntroText>
+        <ScrollDownButton handleScrollDown = {this.handleScrollDown}/>
       </BackgroundContainer>
     );
   }
