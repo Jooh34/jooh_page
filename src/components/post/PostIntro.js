@@ -7,7 +7,7 @@ const BackgroundContainer = styled.div`
   background-image: url(${postWallpaper});
 
   width: 100%;
-  margin-top : ${props => props.max_height-props.height}px;
+  padding-top : ${props => props.max_height-props.height}px;
   height: ${props => props.height}px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@ const BackgroundContainer = styled.div`
 `;
 
 const IntroText = styled.h2`
-  font-family: Roboto', sans-serif';
+  font-family: 'axis';
   font-weight: 900;
   color: black;
   background-color : hsla(120, 100%, 90%, 0.7);
@@ -71,12 +71,12 @@ class PostIntro extends Component {
     }
     else if (this.state.posY > END_SCROLL_Y) {
       opacity = 0;
-      textY = 100;
+      textY = 80;
       height = IMAGE_HEIGHT * 0.5;
     }
     else {
       opacity = (END_SCROLL_Y-this.state.posY)/600;
-      textY = 60 + 40 * (1-opacity);
+      textY = 60 + 20 * (1-opacity);
       height = IMAGE_HEIGHT - (this.state.posY - START_SCROLL_Y) * 0.7;
     }
     return (
