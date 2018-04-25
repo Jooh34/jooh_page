@@ -76,7 +76,7 @@ class NavigationBar extends Component {
   render() {
 
     return (
-      <Container>
+      <Container id = 'navbar'>
         <MenusContainer>
           <MenuContainer onClick = {()=>this.handleMenuClick('home')} onMouseEnter ={() => this.handleMenuMouseEnter('home')} onMouseLeave ={() => this.handleMenuMouseLeave('home')}>
             <Menu mouseOn = {this.state.mouseOn} name = 'home'> HOME </Menu>

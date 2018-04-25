@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Label } from 'semantic-ui-react'
 
 const Templete = styled.div`
-  margin-right : 10px;
+
 `;
 
 class CircularSocialButtons extends Component {
