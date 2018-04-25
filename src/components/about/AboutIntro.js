@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Icon } from 'semantic-ui-react'
+import ReactDOM from 'react-dom';
 
 import about_wallpaper from '../../assets/images/wallpaper/a.jpg';
 
@@ -61,15 +62,12 @@ class AboutIntro extends Component {
     super(props);
     this.state = {
       posY : 0,
-      scrollsecond : 1,
       mouseOn : false,
-      intervalId : '',
     };
     this.handleScroll = this.handleScroll.bind(this);
     this.handleMouseOn = this.handleMouseOn.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
-    this.scrollDown = this.scrollDown.bind(this);
-    this.startScrollDown = this.startScrollDown.bind(this);
+    this.handleScrollDown = this.handleScrollDown.bind(this);
   }
 
   componentDidMount() {
@@ -105,22 +103,9 @@ class AboutIntro extends Component {
     })
   }
 
-  startScrollDown() {
-    var intervalId = setInterval(this.scrollDown, 0.01);
-    this.setState({intervalId: intervalId});
-  }
-
-  scrollDown() {
-    console.log('scrollDown');
-    if(this.state.posY >= 670) {
-      this.setState({ scrollsecond : 1});
-      clearInterval(this.state.intervalId);
-    }
-    else {
-      this.setState({ posY : this.state.posY +  this.state.scrollsecond * this.state.scrollsecond});
-      window.scrollTo(0, this.state.posY);
-      this.setState({ scrollsecond : this.state.scrollsecond + 0.05 });
-    }
+  handleScrollDown() {
+    var el = document.getElementById('profilebox');
+    el.scrollIntoView({ block: 'end',  behavior: 'smooth' });
   }
 
   render() {
@@ -141,11 +126,10 @@ class AboutIntro extends Component {
     return (
       <div>
         <Container max_height = {IMAGE_HEIGHT} height = {height}>
-          <NextButtonContainer mouseOn = {this.state.mouseOn} onMouseEnter = {this.handleMouseOn} onMouseLeave = {this.handleMouseLeave} onClick = {this.startScrollDown}>
+          <NextButtonContainer mouseOn = {this.state.mouseOn} onMouseEnter = {this.handleMouseOn} onMouseLeave = {this.handleMouseLeave} onClick = {this.handleScrollDown}>
             {scrollbutton}
           </NextButtonContainer>
         </Container>
-        <Temp />
       </div>
     );
   }

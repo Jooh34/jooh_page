@@ -40,10 +40,16 @@ const NameTemplete = styled.h1`
 
 class ProfileBox extends Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   render() {
 
     return (
-
+      <div id = 'profilebox'>
+        <Temp/>
+      </div>
     );
   }
 }

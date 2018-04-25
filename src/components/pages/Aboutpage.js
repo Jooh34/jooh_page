@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 
 import AboutIntro from '../about/AboutIntro';
+import ProfileBox from '../about/ProfileBox';
 
 class Aboutpage extends Component {
   render() {
     return (
-      <AboutIntro/>
+      <div>
+        <AboutIntro/>
+        <ProfileBox/>
+      </div>
     );
   }
 }
