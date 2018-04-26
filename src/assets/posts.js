@@ -1,5 +1,21 @@
 const posts = [
   {
+    title : 'React 개인 페이지',
+    subtitle : 'April 2018 ~ ',
+    description : 'react를 사용한 Single Page Application으로 개인 웹페이지 제작하였습니다.',
+    labels : [
+      'Javascript',
+      'React',
+      'Css',
+      'Webpack',
+      'SPA',
+    ],
+    cover : require('./images/project/webpage/webpage_cover.JPG'),
+    github_url : 'https://github.com/Jooh34/jooh_page',
+    demo_url : 'http://34.213.112.175:3000/',
+  },
+
+  {
     title : '강원학사 식단 앱',
     subtitle : 'April 2018',
     description : '대학생활 중 강원학사에 살면서 매번 웹으로 강원학사 식단을 확인하는게 번거롭다고 많이 느껴서 \

@@ -96,7 +96,7 @@ class ProfileBox extends Component {
             <NanumTemplete margin_top = {5} > 남 중 혁 </NanumTemplete>
             <AxisTemplete> Seoul National University </AxisTemplete>
             <AxisTemplete> Computer Science and Engineering </AxisTemplete>
-            <AxisTemplete> finished 5th semester , Taking off now </AxisTemplete>
+            <AxisTemplete> finished 5th semester , Taking semester off now </AxisTemplete>
             <NanumTemplete margin_top = {30} > 현재 산업기능요원 지원 중입니다. </NanumTemplete>
             <SocialButtonsConatiner>
               <CircularSocialButtons/>
