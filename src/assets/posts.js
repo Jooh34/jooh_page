@@ -1,5 +1,20 @@
 const posts = [
   {
+    title : 'Logistic Regression - Mnist Classification',
+    subtitle : '2018.04.29 ',
+    description : 'Tensorflow를 이용하여 Logistic Regression로 Mnist 이미지 분류. \
+    정확도는 대략 91% 정도 나옴. Deep Learning을 위한 기초.',
+    labels : [
+      'Tensorflow'
+      'Python',
+      'Logistic Regression',
+      'basis of Machine Learning',
+      'TensorBoard',
+    ],
+    cover : require('./images/project/tensorflow/mnist_logistic_regression.JPG'),
+  },
+  
+  {
     title : 'React 개인 페이지',
     subtitle : 'April 2018 ~ ',
     description : 'react를 사용한 Single Page Application으로 개인 웹페이지 제작하였습니다.',
