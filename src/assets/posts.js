@@ -1,6 +1,26 @@
 const posts = [
   {
-    title : 'Logistic Regression - Mnist Classification',
+    title : 'Mnist Classification 문제 - Neural Network를 사용하여 분류',
+    subtitle : '2018.04.29 ',
+    description : 'Tensorflow를 이용하여 Neural Network로 Mnist 이미지 분류. \
+    1. initialize 기법 없음 + Adam Optimizer 사용 => 94% accuracy \
+    2. xavier initialization + Adam Optimizer 사용 => 97.7% accuracy \
+    3. xavier initialization + Adam Optimizer 사용 + 3 hidden layer + dropout 사용 => 98.32% \
+    initialization 만 추가했음에도 initial cost가 엄청나게 줄어드는 것으로 확인. 초기화의 중요성을 깨달았음. \
+    곧 CNN 기법으로 정확도 99% 에 도달하는 방법에 대해 공부할 예정. \
+    ',
+    labels : [
+      'Tensorflow'
+      'Python',
+      'Neural Network',
+      'Deep Learning',
+      'TensorBoard',
+    ],
+    cover : require('./images/project/tensorflow/mnist_logistic_deeplearning3.JPG'),
+  },
+
+  {
+    title : 'Mnist Classification 문제 - Logistic Regression 기법',
     subtitle : '2018.04.29 ',
     description : 'Tensorflow를 이용하여 Logistic Regression로 Mnist 이미지 분류. \
     정확도는 대략 91% 정도 나옴. Deep Learning을 위한 기초.',
@@ -13,7 +33,7 @@ const posts = [
     ],
     cover : require('./images/project/tensorflow/mnist_logistic_regression.JPG'),
   },
-  
+
   {
     title : 'React 개인 페이지',
     subtitle : 'April 2018 ~ ',
