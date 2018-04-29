@@ -10,13 +10,13 @@ const posts = [
     곧 CNN 기법으로 정확도 99% 에 도달하는 방법에 대해 공부할 예정. \
     ',
     labels : [
-      'Tensorflow'
+      'Tensorflow',
       'Python',
       'Neural Network',
       'Deep Learning',
       'TensorBoard',
     ],
-    cover : require('./images/project/tensorflow/mnist_logistic_deeplearning3.JPG'),
+    cover : require('./images/project/tensorflow/mnist_deeplearning3.JPG'),
   },
 
   {
