@@ -25,7 +25,7 @@ const posts = [
     description : 'Tensorflow를 이용하여 Logistic Regression로 Mnist 이미지 분류. \
     정확도는 대략 91% 정도 나옴. Deep Learning을 위한 기초.',
     labels : [
-      'Tensorflow'
+      'Tensorflow',
       'Python',
       'Logistic Regression',
       'basis of Machine Learning',
