@@ -61,7 +61,7 @@ const IconContainer = styled.div`
   margin : auto;
 `;
 
-const ToTheTopTemplete = styled.div`
+const ScrolltoTopTemplete = styled.div`
   font : blogger;
   width : 100%;
   height : 50%;
@@ -100,7 +100,7 @@ class Footer extends Component {
         </TextNavContainer>
         <TopButtonContainer onClick = {this.handleTopButtonClick}>
           <IconContainer> <Icon name='chevron up' size = 'large' color = 'grey'/> </IconContainer>
-          <ToTheTopTemplete> To The Top </ToTheTopTemplete>
+          <ScrolltoTopTemplete> scroll to top </ScrolltoTopTemplete>
         </TopButtonContainer>
         <SocialButtonsContainer>
           <CircularSocialButtons />
