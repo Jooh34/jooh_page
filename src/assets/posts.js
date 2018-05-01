@@ -27,14 +27,13 @@ const posts = [
     2. xavier initialization + Adam Optimizer 사용 => 97.7% accuracy \
     3. xavier initialization + Adam Optimizer 사용 + 3 hidden layer + dropout 사용 => 98.32%',
     labels : [
-      'Tensorflow'
+      'Tensorflow',
       'Python',
       'Neural Network',
       'Deep Learning',
       'TensorBoard',
     ],
-    cover : require('./images/project/tensorflow/mnist_logistic_deeplearning3.JPG'),
-    github_url : 'https://github.com/Jooh34/tensor_prac',
+    cover : require('./images/project/tensorflow/mnist_deeplearning3.JPG'),
   },
 
   {
