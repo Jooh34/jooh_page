@@ -1,14 +1,31 @@
 const posts = [
   {
-    title : 'Mnist Classification 문제 - Neural Network를 사용하여 분류',
+    title : 'Mnist Classification 문제 - Convolutional Neural Network 사용',
+    subtitle : '2018.05.01 ',
+    description : 'Tensorflow를 이용하여 Convolutional Neural Network(CNN)로 Mnist 이미지 분류. \
+    55000개 training image와 10000개의 test image로 진행하였다. 28x28 이미지를 convolution + maxpooling + dropout \
+    을 두 단계 거친 후, fully connected NN 두단계를 걸쳐 output에 연결하였다. \
+    50개의 batch * 20000번의 반복학습 결과 99.2%의 정확도를 얻었으며 CPU 계산으로는 1724초(약30분), GPU계산으로는 \
+    245초(약4분)가 걸렸다.',
+    labels : [
+      'Tensorflow',
+      'Tensorflow-GPU',
+      'Python',
+      'Convolutional Neural Network',
+      'Deep Learning',
+      'TensorBoard',
+    ],
+    cover : require('./images/project/tensorflow/mnistCNN_tensorboard.png'),
+    github_url : 'https://github.com/Jooh34/tensor_prac',
+  },
+
+  {
+    title : 'Mnist Classification 문제 - Neural Network 사용',
     subtitle : '2018.04.29 ',
     description : 'Tensorflow를 이용하여 Neural Network로 Mnist 이미지 분류. \
     1. initialize 기법 없음 + Adam Optimizer 사용 => 94% accuracy \
     2. xavier initialization + Adam Optimizer 사용 => 97.7% accuracy \
-    3. xavier initialization + Adam Optimizer 사용 + 3 hidden layer + dropout 사용 => 98.32% \
-    initialization 만 추가했음에도 initial cost가 엄청나게 줄어드는 것으로 확인. 초기화의 중요성을 깨달았음. \
-    곧 CNN 기법으로 정확도 99% 에 도달하는 방법에 대해 공부할 예정. \
-    ',
+    3. xavier initialization + Adam Optimizer 사용 + 3 hidden layer + dropout 사용 => 98.32%',
     labels : [
       'Tensorflow'
       'Python',
@@ -17,10 +34,11 @@ const posts = [
       'TensorBoard',
     ],
     cover : require('./images/project/tensorflow/mnist_logistic_deeplearning3.JPG'),
+    github_url : 'https://github.com/Jooh34/tensor_prac',
   },
 
   {
-    title : 'Mnist Classification 문제 - Logistic Regression 기법',
+    title : 'Mnist Classification 문제 - Logistic Regression 사용',
     subtitle : '2018.04.29 ',
     description : 'Tensorflow를 이용하여 Logistic Regression로 Mnist 이미지 분류. \
     정확도는 대략 91% 정도 나옴. Deep Learning을 위한 기초.',
@@ -32,6 +50,7 @@ const posts = [
       'TensorBoard',
     ],
     cover : require('./images/project/tensorflow/mnist_logistic_regression.JPG'),
+    github_url : 'https://github.com/Jooh34/tensor_prac',
   },
 
   {
