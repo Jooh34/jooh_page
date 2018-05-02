@@ -54,7 +54,7 @@ const posts = [
 
   {
     title : 'React 개인 페이지',
-    subtitle : 'April 2018 ~ ',
+    subtitle : '2018.04.18 ~ 2018.04.27',
     description : 'react를 사용한 Single Page Application으로 개인 웹페이지 제작하였습니다.',
     labels : [
       'Javascript',
@@ -70,7 +70,7 @@ const posts = [
 
   {
     title : '강원학사 식단 앱',
-    subtitle : 'April 2018',
+    subtitle : '2018.04.07 ~ 2018.04.16',
     description : '대학생활 중 강원학사에 살면서 매번 웹으로 강원학사 식단을 확인하는게 번거롭다고 많이 느껴서 \
     언젠가는 강원학사 식단 정보 앱을 만들어 학사 사람들에게 배포해야겠다고 생각했었는 \
     마침 nodeJS 연습 겸 식단 앱을 만들어 사람들에게 배포했습니다',
@@ -87,7 +87,7 @@ const posts = [
 
   {
     title : '강원학사 식단 메뉴 서버',
-    subtitle : 'April 2018',
+    subtitle : '2018.04.07 ~ 2018.04.11',
     description : '강원학사 홈페이지에서 날짜 및 해당 날짜의 식단 정보 크롤링 연습. \
     서버는 AWS EC2 를 이용하였습니다. ',
     labels : [
