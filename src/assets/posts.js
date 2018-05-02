@@ -1,5 +1,19 @@
 const posts = [
   {
+    title : '온라인 강의 자동 시청 with selenium',
+    subtitle : '2018.05.02',
+    description : '온라인 강의 자동으로 모두 시청해주는 프로그램. \
+    (어머니가 온라인 강의 일일이 눌러서 듣기 귀찮다고 하셔서 제작)',
+    labels : [
+      'Python',
+      'Selenium',
+      'WebDriver',
+    ],
+    cover : require('./images/project/selenium/selenium.jpg'),
+    github_url : 'https://github.com/Jooh34/watching-onlinevideo-automation',
+  },
+
+  {
     title : 'Mnist Classification 문제 - Convolutional Neural Network 사용',
     subtitle : '2018.05.01 ',
     description : 'Tensorflow를 이용하여 Convolutional Neural Network(CNN)로 Mnist 이미지 분류. \
@@ -34,6 +48,7 @@ const posts = [
       'TensorBoard',
     ],
     cover : require('./images/project/tensorflow/mnist_deeplearning3.JPG'),
+    github_url : 'https://github.com/Jooh34/tensor_prac',
   },
 
   {
